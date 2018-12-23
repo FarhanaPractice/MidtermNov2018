@@ -1,11 +1,13 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A.programming language is a language that use in computer programming to create programs .The tearm programming language
+ususally refers to high level language.
 What jdk contains or composed of and define each components?
+
 A.
 What is IDE?
-A.
+A.An integrated development environment is a softwear suite that gather basic tools required to write and test softwear.
 What are the IDEs available in the market to support java?
 Explain the entire java life cycle.
 what is class?
@@ -16,6 +18,7 @@ Which class is the superclass of all classes?
 What is difference between path and classpath variables?
 What is the difference between an Interface and Abstract class?
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+
 what is Access Specifier?
 What is OOP ? Define each feature of java OOP.
 What is Java Package and which package is imported by default?
