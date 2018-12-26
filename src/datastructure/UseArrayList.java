@@ -1,7 +1,6 @@
 package datastructure;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 public class UseArrayList {
 
 	public static void main(String[] args) {
@@ -39,7 +38,8 @@ public class UseArrayList {
 		) {
 			System.out.println(st);
 		}
-		}
+
+	}
 
 
 }

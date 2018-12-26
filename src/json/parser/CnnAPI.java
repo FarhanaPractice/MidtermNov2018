@@ -104,7 +104,7 @@ public class CnnAPI {
         }
         //Storing to Database
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-        connectToSqlDB.insertDataFromStringToSqlTable(list1,"CNN","News");
+        //connectToSqlDB.insertDataFromStringToSqlTable(list1,"CNN","News");
         try {
             List<String> dbnews = connectToSqlDB.readDataBase("CNN", "News");
         }catch(Exception e){

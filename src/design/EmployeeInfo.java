@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends dept{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -36,13 +36,13 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+
 	/*
-	 * You must implement the logic for below 2 methods and 
+	 * You must implement the logic for below 2 methods and
 	 * following 2 methods are prototype as well for other methods need to be design,
 	 * as you will come up with the new ideas.
 	 */
-	
+
 	/*
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
@@ -51,20 +51,21 @@ public class EmployeeInfo {
 		this.employeeId=employeeId;
 
 	}
-    public EmployeeInfo(String name, int employeeId){
+	public EmployeeInfo(String name, int employeeId){
 		this.name=name;
 		this.employeeId=employeeId;
 
 	}
+
 	public EmployeeInfo(String name, int employeeId, String deptName, double salary, char gender) {
 		this.name = name;
 		this.employeeId = employeeId;
 		this.deptName = deptName;
 		this.salary = salary;
 		this.gender = gender;
-    }
+	}
 
-    public String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -80,12 +81,12 @@ public class EmployeeInfo {
 		this.employeeId = employeeId;
 	}
 
-	//@Override
+	@Override
 	public int employeeId() {
 		return 0;
 	}
 
-	//@Override
+	@Override
 	public String employeeName() {
 		return null;
 	}
@@ -95,12 +96,12 @@ public class EmployeeInfo {
 
 	}
 
-	//@Override
+	@Override
 	public int calculateSalary() {
 		return 0;
 	}
 
-	//@Override
+	@Override
 	public void benefitLayout() {
 
 	}
@@ -135,7 +136,7 @@ public class EmployeeInfo {
 
 	}
 
-	//@Override
+	@Override
 	public void farewell(int date) {
 		System.out.println("His farewell date was "+date);
 
@@ -146,18 +147,18 @@ public class EmployeeInfo {
 		calculateEmployeeBonus(10);
 	}
 
-	//private void calculateEmployeeBonus(int i) {
-
+	private void calculateEmployeeBonus(int i) {
+	}
 
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
-	 * Hints: 10% of the salary for best performance, 8% of the salary for average performance and so on. 
+	 * Hints: 10% of the salary for best performance, 8% of the salary for average performance and so on.
 	 * You can set arbitrary number for performance.
 	 * So you probably need to send 2 arguments.
-	 * 
+	 *
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
+	public static int calculateEmployeeBonus(int numberOfYearsWithCompany, double yearlySalary){
 		double yearlyBonus = 0.00;
 		if (numberOfYearsWithCompany == 5) {
 			yearlyBonus = yearlySalary* 0.1;
@@ -174,13 +175,11 @@ public class EmployeeInfo {
 		}
 		return (int) yearlyBonus;
 	}
-
-	
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
 	 * Then it will return the total pension. So you need to implement the logic.
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
-	 * 
+	 *
 	 */
 	public static int calculateEmployeePension(){
 		int total=0;
@@ -189,10 +188,10 @@ public class EmployeeInfo {
 		String joiningDate = sc.nextLine();
 		System.out.println("Please enter today's date in format (example: August,2017): ");
 		String todaysDate = sc.nextLine();
-        String convertedJoiningDate = DateConversion.convertDate(joiningDate);
-        String convertedTodaysDate = DateConversion.convertDate(todaysDate);
+		String convertedJoiningDate = DateConversion.convertDate(joiningDate);
+		String convertedTodaysDate = DateConversion.convertDate(todaysDate);
 
-        //implement numbers of year from above two dates
+		//implement numbers of year from above two dates
 		String startYear = convertedJoiningDate.substring(convertedJoiningDate.length() - 4, convertedJoiningDate.length());
 		String currentYear = convertedTodaysDate.substring(convertedTodaysDate.length() - 4, convertedTodaysDate.length());
 		int start = Integer.parseInt(startYear);
@@ -215,6 +214,7 @@ public class EmployeeInfo {
 			total = 0;
 		}
 		System.out.println("Total pension: $" + total);
+
 
 		return total;
 	}

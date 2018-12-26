@@ -31,7 +31,7 @@ public class FortuneEmployee {
 		e2.getGender();
 
 		EmployeeInfo.calculateEmployeePension();
-		EmployeeInfo.calculateEmployeeBonus(10,50000.00);
+		//EmployeeInfo.calculateEmployeeBonus(10,50000.00);
 		EmployeeInfo.setCompanyName("PNT");
 
 
