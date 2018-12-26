@@ -12,35 +12,21 @@ public class Permutation {
          * Write Java program to compute all Permutation of a String
          *
          */
-        String st = "ABCD";
-        int i = st.length();
-        Permutation permutation = new Permutation();
-        permutation.permute(st, 0, i-1);
-    }
+        permutation("123");
 
-    private void permute(String string, int j, int k)
-    {
-        if (j == k)
-            System.out.println(string);
-        else
-        {
-            for (int i = j; i <= k; i++)
-            {
-                string = swap(string,j,i);
-                permute(string, j+1, k);
-                string = swap(string,j,i);
+    }
+    public static void permutation(String input) {
+        permutation("", input);
+
+    }
+    private static void permutation(String perm, String word) {
+        if(word.isEmpty()) {
+            System.err.println(perm + word);
+        } else {
+            for (int i = 0; i<word.length(); i++) {
+                permutation(perm + word.charAt(i), word.substring(0,i) + word.substring(i + 1, word.length()));
             }
         }
-    }
-
-    public String swap(String a, int i, int j)
-    {
-        char temp;
-        char[] charArray = a.toCharArray();
-        temp = charArray[i] ;
-        charArray[i] = charArray[j];
-        charArray[j] = temp;
-        return String.valueOf(charArray);
     }
 
 }
